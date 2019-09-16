@@ -28,7 +28,9 @@ class ScrambleRootPassword(base.BasePlugin):
 
     def execute(self, service, shared_data):
         osutils = osutils_factory.get_os_utils()
-        password = self._get_password(osutils)
+        #password = self._get_password(osutils)
+        #Define default root passs
+        password = 'nhanhoa#@!'
 
         LOG.info('Scrambling root password')
         osutils.set_user_password('root', password)
